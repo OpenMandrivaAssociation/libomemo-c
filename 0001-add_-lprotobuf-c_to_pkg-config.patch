@@ -1,0 +1,20 @@
+From 8b6f2ebfe16c27e1037c9a3f4fcbb78ad9da10ea Mon Sep 17 00:00:00 2001
+From: =?UTF-8?q?Franz=20Brau=C3=9Fe?= <brausse@informatik.uni-trier.de>
+Date: Mon, 26 Aug 2019 08:45:11 +0200
+Subject: [PATCH] add '-lprotobuf-c' to pkg-config's Libs: line
+
+---
+ src/libomemo-c.pc.in | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/libomemo-c.pc.in b/src/libomemo-c.pc.in
+index 8d4a0a76..50ae8914 100644
+--- a/src/libomemo-c.pc.in
++++ b/src/libomemo-c.pc.in
+@@ -9,5 +9,5 @@ Description: OMEMO C Library
+ Version: @SIGNAL_PROTOCOL_C_VERSION@
+ 
+ Requires:
+-Libs: -L${libdir} -L${sharedlibdir} -l@PROJECT_NAME@
++Libs: -L${libdir} -L${sharedlibdir} -l@PROJECT_NAME@ -lprotobuf-c
+ Cflags: -I${includedir}/omemo
