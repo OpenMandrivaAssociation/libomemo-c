@@ -57,8 +57,7 @@ Header files for development with %{name}.
 %autosetup -p1
 
 %build
-%cmake \
-    -DBUILD_TESTING=ON \
+%cmake
 %make_build
 
 %install
